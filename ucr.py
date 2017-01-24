@@ -68,8 +68,11 @@ def get_ucr_for_city(city_code):
     return filtered_list
 
 
+twentysixteen = {'aggravated_assaults': 1481, 'homicides': 33, 'rapes': 197, 'robberies': 1138, 'population': 0, 'violent_crime': 2849}
+
 def pivot_for_visualization(records, scale=False):
     labels = [str(x['year']) for x in records]
+    labels.append('2016')
 
     data = {'labels': labels, 'datasets': []}
     colors = {'aggravated_assaults': (0, 51, 204), 'homicides': (153, 0, 204), 'rapes': (204, 0, 153), 'robberies': (10, 71, 255), 'population': (204, 0, 51), 'violent_crime': (0, 204, 153)}
@@ -82,6 +85,10 @@ def pivot_for_visualization(records, scale=False):
                 record['data'].append(year[crime] / year['population'] * scale)
             else:
                 record['data'].append(year[crime])
+
+        # record['data'].append(year[crime])
+
+        record['data'].append(twentysixteen[crime])
 
         data['datasets'].append(record)
 
