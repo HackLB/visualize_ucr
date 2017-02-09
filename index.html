@@ -4,34 +4,22 @@
     <meta charset='utf-8' />
     <title>Crime in Long Beach, from FBI UCR</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<style>
-    body { 
-        margin: 0; 
-        padding: 0; 
-    }
-    
-    #chart-container { 
-        position: absolute; 
-        top: 0; 
-        bottom: 0; 
-        width: 100%; 
-        background-color: #000000;
-    }
-</style>
-
-
 <canvas id="myChart" class="chart-container"></canvas>
+
+<div id="notes">
+<p>This chart shows absolute violent crime numbers from 1975 to current, based on <a href="https://ucr.fbi.gov/">Uniform Crime Reporting</a> data.</p>
+<p>Click the headers at the top to toggle each category off or on.</p>
+<p><a href="diff.html">Click here</a> for a bar chart showing % change year-over-year.</p>
+<p>** For years beginning 2015, this chart uses a revised definition of rape, per UCR changes. Therefore, comparisons across the 2014-2015 must be understood in context of these changes.</p>
+</div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.min.js"></script>
 <script src="licenses.js"></script>
-
-<script>
-   
-</script>
 
 </body>
 </html>
