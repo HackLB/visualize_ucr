@@ -16,3 +16,9 @@ body {
     padding: 8px;
     font-family: Helvetica, Arial;
 }
+
+#citySelect {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+}
