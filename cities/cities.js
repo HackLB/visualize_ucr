@@ -6,7 +6,7 @@ $( document ).ready(function() {
         showCities(data);
     });
 
-    $.get( "_data/CA03404.json", function( data ) {
+    $.get( "_data/NA.json", function( data ) {
         console.log(data);
         lineGraph(data);
     });
