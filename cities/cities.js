@@ -1,13 +1,11 @@
 $( document ).ready(function() {
     console.log( "ready2!" );
 
-    $.get( "cities.json", function( data ) {
-        console.log(data);
+    $.get( "./cities.json", function( data ) {
         showCities(data);
     });
 
-    $.get( "_data/NA.json", function( data ) {
-        console.log(data);
+    $.get( "./_data/NA.json", function( data ) {
         lineGraph(data);
     });
 
@@ -18,28 +16,22 @@ function showCities(data) {
     console.log('starting showCities');
     var list = $("#citySelect");
     $.each( data.cities, function( key, value ) {
-        console.log( value);
         if (value.code == 'NA') {
             list.append('<option value="'+value.code+'" selected>' + value.name + '</option>');
         } else {
             list.append('<option value="'+value.code+'">' + value.name + '</option>');
         }
     });
-    console.log(data);
 }
 
 function changeCity(theOption) {
-    console.log(theOption.value);
-
-
     $.get( "_data/"+ theOption.value +".json", function( data ) {
-        console.log(data);
         lineGraph(data);
     });
 }
 
 function lineGraph(data) {
-    console.log('starting');
+    console.log('graphing...');
     var ctx = $("#myChart");
 
     var myChart = new Chart(ctx, {
