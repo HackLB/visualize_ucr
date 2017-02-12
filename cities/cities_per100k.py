@@ -31,7 +31,7 @@ def clean(record):
     data['rapes'] = get_num(record.get('rape_per_100k', -1))
     data['robberies'] = get_num(record.get('rob_per_100k', -1))
     data['population'] = get_num(record.get('total_pop', -1))
-    data['violent_crime'] = get_num(record.get('violent_crime', -1))
+    data['violent_crime'] = get_num(record.get('violent_per_100k', -1))
     data['year'] = get_num(record.get('year', -1))
 
     return data
