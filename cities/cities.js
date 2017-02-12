@@ -5,7 +5,7 @@ $( document ).ready(function() {
         showCities(data);
     });
 
-    $.get( "./_data/NA.json", function( data ) {
+    $.get( "./data/NA.json", function( data ) {
         lineGraph(data);
     });
 
@@ -25,7 +25,7 @@ function showCities(data) {
 }
 
 function changeCity(theOption) {
-    $.get( "_data/"+ theOption.value +".json", function( data ) {
+    $.get( "data/"+ theOption.value +".json", function( data ) {
         lineGraph(data);
     });
 }

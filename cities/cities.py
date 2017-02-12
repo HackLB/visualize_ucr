@@ -104,7 +104,7 @@ def save_cities(cities):
 
 if __name__ == "__main__":
     repo_path = os.path.dirname(os.path.realpath(sys.argv[0]))    # Path to current directory
-    data_path = os.path.join(repo_path, '_data')                  # Root path for record data
+    data_path = os.path.join(repo_path, 'data')                  # Root path for record data
     os.makedirs(data_path, exist_ok=True)                         # Create _data directory
 
     cities = get_cities()                                      # Fetch UCR data and filter by city
